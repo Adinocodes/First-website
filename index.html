@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Adino Designs — graphic design, brand identity, and creative direction.">
+  <title>Adino Designs — Design World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --gutter: clamp(18px, 5vw, 76px); --gold: #efc329; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { font-family: Poppins, Arial, sans-serif; background: #101010; color: #fff; }
+    .hero { position: relative; min-height: 100svh; width: 100%; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; background: #151515; }
+    .hero-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .shade { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,.04) 35%,rgba(0,0,0,.03) 60%,rgba(0,0,0,.68)); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(18px,3.5vh,34px) var(--gutter); }
+    .brand { color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 9px; font-size: 15px; letter-spacing: -.3px; text-shadow: 0 2px 12px #0008; }
+    .mark { display: inline-block; width: 17px; height: 31px; border-radius: 2px 20px 20px 2px; background: var(--gold); transform: skewY(-18deg); }
+    .brand b { font-weight: 700; } .brand span { font-weight: 300; }
+    nav { display: flex; align-items: center; gap: clamp(14px,3.5vw,48px); }
+    nav a { color: white; text-decoration: none; font-size: clamp(11px,1vw,14px); font-weight: 500; text-shadow: 0 2px 12px #0008; }
+    nav a:hover, nav a:focus-visible { color: var(--gold); }
+    .bottom { margin-top: auto; padding: 0 var(--gutter) max(22px,env(safe-area-inset-bottom)); }
+    .intro { max-width: 650px; margin-bottom: 22px; }
+    .eyebrow { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: var(--gold); margin: 0 0 10px; }
+    h1 { font-size: clamp(32px,6vw,76px); line-height: 1.04; letter-spacing: -.055em; margin: 0; font-weight: 700; text-wrap: balance; text-shadow: 0 3px 20px #0007; }
+    h1 span { color: var(--gold); }
+    .sub { font-size: clamp(12px,1.2vw,15px); line-height: 1.7; max-width: 490px; margin: 14px 0 0; color: #fff; text-shadow: 0 2px 12px #0009; }
+    .bottom-row { display: flex; align-items: center; justify-content: space-between; gap: 22px; border-top: 1px solid #ffffff70; padding-top: 17px; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border: 1px solid #fff; border-radius: 5px; background: #111d; color: #fff; font-size: 12px; text-decoration: none; font-weight: 500; transition: background .2s,color .2s,border-color .2s; }
+    .cta:hover, .cta:focus-visible { background: var(--gold); border-color: var(--gold); color: #111; }
+    .contact { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; font-size: 10px; }
+    .contact a { color: #fff; text-decoration: none; overflow-wrap: anywhere; }
+    .contact a:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .hero { min-height: 100svh; }
+      .hero-image { object-fit: contain; object-position: center center; background: #eeece6; }
+      .shade { background: linear-gradient(180deg,rgba(0,0,0,.7),transparent 22%,transparent 66%,rgba(0,0,0,.78)); }
+      header { align-items: flex-start; padding-top: max(17px,env(safe-area-inset-top)); }
+      .brand { font-size: 12px; gap: 6px; }
+      .mark { width: 12px; height: 25px; }
+      nav { gap: 12px; }
+      nav a { font-size: 11px; }
+      .bottom { padding-bottom: max(18px,env(safe-area-inset-bottom)); }
+      .intro { margin-bottom: 16px; }
+      h1 { font-size: clamp(29px,8.8vw,48px); }
+      .sub { font-size: 12px; max-width: 330px; }
+      .bottom-row { align-items: flex-start; flex-direction: column; gap: 14px; }
+      .cta { min-height: 42px; }
+      .contact { justify-content: flex-start; gap: 7px 12px; font-size: 9px; }
+    }
+    @media (max-width: 360px) {
+      header { gap: 10px; }
+      nav { gap: 9px; }
+      nav a { font-size: 10px; }
+      .contact { font-size: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <img class="hero-image" src="assets/adino-brand-hero.png" alt="Adino Designs brand identity mockups featuring branded merchandise and stationery">
+    <div class="shade" aria-hidden="true"></div>
+    <header>
+      <a class="brand" href="#home" aria-label="Adino Designs home"><i class="mark" aria-hidden="true"></i><b>Design</b><span>World</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="https://mainstack.me/adinodesigns" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="https://wa.me/2349032549322" target="_blank" rel="noopener noreferrer">Contact</a>
+      </nav>
+    </header>
+    <section class="bottom" id="home">
+      <div class="intro">
+        <p class="eyebrow">Adino Designs · Branding & Creative</p>
+        <h1>Ideas made <span>memorable.</span></h1>
+        <p class="sub">Strategic graphic design and brand identity that helps businesses show up with clarity, character, and confidence.</p>
+      </div>
+      <div class="bottom-row">
+        <a class="cta" href="https://mainstack.me/adinodesigns" target="_blank" rel="noopener noreferrer">Explore portfolio ↗</a>
+        <div class="contact" aria-label="Contact details">
+          <a href="mailto:adinodesigns@yahoo.com">adinodesigns@yahoo.com</a>
+          <a href="mailto:adinodesigns07@gmail.com">adinodesigns07@gmail.com</a>
+          <a href="https://instagram.com/adinodesigns_" target="_blank" rel="noopener noreferrer">@adinodesigns_ ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
